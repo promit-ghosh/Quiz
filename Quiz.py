@@ -16,7 +16,7 @@ else:
     else:
         print("duh !! That's not correct")
 
-print("Question 2 - Which is a city in India Delhi or Dhaka")
+print("Question 2 - Which is a city in India Delhi or Dhaka?")
 try:
     userAns = str(input("Your answer is "))
 except ValueError:
