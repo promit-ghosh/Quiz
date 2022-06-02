@@ -15,3 +15,6 @@ else:
         print("yay !! That's correct")
     else:
         print("duh !! That's not correct")
+
+
+quit()
