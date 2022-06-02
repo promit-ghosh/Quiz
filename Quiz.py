@@ -16,5 +16,17 @@ else:
     else:
         print("duh !! That's not correct")
 
-
-quit()
+print("Question 2 - Which is a city in India Delhi or Dhaka")
+try:
+    userAns = str(input("Your answer is "))
+except ValueError:
+    print("Enter string input only next time")
+    print()
+except Exception as e:
+    print("Something went wrong")
+    print(e)
+else:
+    if userAns.lower() == "delhi":
+        print("yay !! That's correct")
+    else:
+        print("duh !! That's not correct")
