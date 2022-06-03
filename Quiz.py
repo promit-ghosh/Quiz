@@ -29,22 +29,29 @@ def quiz(typeOfAns, Ques, Ans1, QuesNum):
         if typeOfAns == 'int':
             if str(userAns) == str(Ans1):
                 rightOrWrong = 'right'
-        else :
-            if typeOfAns == 'str':
-                if str(userAns).lower() == str(Ans1).lower():
-                    rightOrWrong = 'right'
+                
+        elif typeOfAns == 'str':
+            if str(userAns).lower() == str(Ans1).lower():
+                rightOrWrong = 'right'
 
     if rightOrWrong == 'right':
         print("yay !! That's correct")
     else:
         print("duh !! That's not correct")
     print()
+    return(rightOrWrong)
 
 QuesCntr = 1
-quiz('int', 'which is greater 49 or 94', '94', str(QuesCntr))
+score=0
+rightOrWrong = quiz('int', 'which is greater 49 or 94', '94', str(QuesCntr))
+if rightOrWrong == 'right': score +=1
 
 QuesCntr += 1
-quiz('str', 'Which is a city in India Delhi or Dhaka', 'Delhi', str(QuesCntr))
+rightOrWrong = quiz('str', 'Which is a city in India Delhi or Dhaka', 'Delhi', str(QuesCntr))
+if rightOrWrong == 'right': score +=1
 
 QuesCntr += 1
-quiz('int', 'What is the value of 9 x 9', '81', str(QuesCntr))
+rightOrWrong = quiz('int', 'What is the value of 9 x 9', '81', str(QuesCntr))
+if rightOrWrong == 'right': score +=1
+
+print("Your score is " + str(score) + " out of " + str(QuesCntr))
